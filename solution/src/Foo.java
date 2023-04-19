@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.*
+import java.util.*;
 
 public class Foo
 {
@@ -12,41 +12,34 @@ public class Foo
      *  2. List (STRING_ARRAY) - shoppingCart
      */
 
-    private boolean checkFruit(String codeFruit, String shoppingFruit){
+    private static boolean checkFruit(String codeFruit, String shoppingFruit){
 	return codeFruit.equals(shoppingFruit) || codeFruit.equals("anything") && !shoppingFruit.equals("nothing");
     }
 
-    public static int IsBuyerWinner(ArrayList<String> codeList, ArrayList<String> shoppingCart) {
-		
-	Iterator<ArrayList<String>> codeItterator = codeList.iterator();
-	Iterator<String> shoppingCartItterator = shoppingCart.iterator();
-	
-	ArrayList<String> currentCodeList = codeItterator.next();
-	Iterator<String> currentCodeListIterator = currentCodeList.iterator();
+    public static int IsBuyerWinner(String[][] codeList,String[] shoppingCart) {
+	String[] currentCodeList = codeList[0];
+	int curIndex = 0;
 
-	String currentShoppingItem = shoppingCartItterator.next();
-	int offset = 0;
-
-	for (int i = shoppingCart.size(); i > 0; i--){
-		String curShopItem = currentShoppingItem.next();
-
-		if (currentCodeList.size() > i)
+	for (int i = 0; i < shoppingCart.length; i++){
+		// Check if there is enough elements left to compare to save time
+		if (currentCodeList.length > shoppingCart.length - i - 1) 
 			return 0;
-		else if checkFruit(currentCodeListIterator.next(), curShopItem) {
+		else if (checkFruit(currentCodeList[0],shoppingCart[i])) {
 			boolean patternFound = true;
-			while (currentCodeListIterator.hasNext()){
-				i--;
-				if !checkFruit(currentCodeListIterator.next(), currentShoppingItem.next()) {
-					patternFound = false;
-					currentCodeListIterator = currentCodeList.iterator();
-					break;
-				}
-			}
 
+			for (int j = 1; j < currentCodeList.length; j++){
+				if (!checkFruit(currentCodeList[j],shoppingCart[i + 1])) {
+					patternFound = false;
+					break;
+				}else
+					i++;
+			}
+			
 			if (patternFound){
-				if (codeItterator.hasNext())
-					currentCodeList = codeItterator.next();
-				else
+				if (codeList.length - 1 != curIndex){
+					curIndex++;
+					currentCodeList = codeList[curIndex];
+				}else
 					return 1;
 			}
 		}
