@@ -12,11 +12,11 @@ public class Solution {
 
         for (int i = 0; i < codeListCount; i++) {
             String codes = scanner.nextLine();
-            codeList[i] = codes.split(" ");
+            codeList[i] = codes.split(" ", 0);
         }
 
         String shoppingCartString = scanner.nextLine();
-        String[] shoppingCart = shoppingCartString.split(" ");
+        String[] shoppingCart = shoppingCartString.split(" ", 0);
 
         int foo = Foo.IsBuyerWinner(codeList, shoppingCart);
         System.out.println(foo);

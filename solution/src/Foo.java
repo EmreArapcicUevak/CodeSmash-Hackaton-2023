@@ -22,7 +22,7 @@ public class Foo
 
 	for (int i = 0; i < shoppingCart.length; i++){
 		// Check if there is enough elements left to compare to save time
-		if (currentCodeList.length > shoppingCart.length - i - 1) 
+		if (currentCodeList.length > shoppingCart.length - i)
 			return 0;
 		else if (checkFruit(currentCodeList[0],shoppingCart[i])) {
 			boolean patternFound = true;
