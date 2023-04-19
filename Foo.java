@@ -25,11 +25,12 @@ public class Foo
 		// Check if there is enough elements left to compare to save time
 		if (currentCodeList.length > shoppingCart.length - i)
 			return 0;
-		else if (checkFruit(currentCodeList[0],shoppingCart[i])) {
+		else if (checkFruit(currentCodeList[0],shoppingCart[i])) { // If there are enough elements, and the first element match start comparing other elements
 			patternFound = true;
 
 			for (int j = 1; j < currentCodeList.length; j++){
 				if (!checkFruit(currentCodeList[j],shoppingCart[i + 1])) {
+					// If at any point the elements stop matching, break out
 					patternFound = false;
 					break;
 				}else
@@ -38,9 +39,10 @@ public class Foo
 			
 			if (patternFound){
 				if (codeList.length - 1 != curIndex){
+					// If all elements matched but the there are still more codes to go through
 					curIndex++;
 					currentCodeList = codeList[curIndex];
-				}else
+				}else // If all elements matched and no more codes were left to go over
 					return 1;
 			}
 		}
