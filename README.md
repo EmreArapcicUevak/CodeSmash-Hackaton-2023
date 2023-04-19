@@ -2,7 +2,7 @@
 
 The CodeSmash-Hackaton-2023 repository is created for the 2023 CodeSmash Hackathon event. The repository contains code for a solution to a problem provided by the Hackathon organizers to enter the event. The solution code is written in Java.
 
-#### Problem statement
+### Problem statement
 A company is running a promotion in which buyers receive prizes for purchasing a secret combination of
 fruits. The combination will change each day, and the team running the promotion wants to use a code
 list to make it easy to change the combination. The code list contains groups of fruits. Both the order of
@@ -34,9 +34,9 @@ Please provide written explanation of your approach.
 ##### BONUS
 Provide time and space complexity of your approach.
 
-#### Approach Explanation
+### Approach Explanation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-#### Example input 
+### Example input 
 ```java
 2  // number of codes
 banana apple orange // first code
@@ -44,5 +44,5 @@ kiwi // second code
 apple apple banana apple orange orange kiwi orange // shopping cart
 ```
 
-#### Space and time complexity
+### Space and time complexity
 For space and time complexity of the solution check this [link](https://github.com/EmreArapcicUevak/CodeSmash-Hackaton-2023/issues/3).
