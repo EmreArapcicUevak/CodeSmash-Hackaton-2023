@@ -1,35 +1,24 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         int codeListCount = scanner.nextInt();
         scanner.nextLine();
 
 
-        ArrayList<String> codeList = new ArrayList<String>();
+        String[][] codeList = new String[codeListCount][];
 
-        for (int i = 0; i < codeListCount; i++)
-        {
-            String codeListItem = scanner.nextLine();
-            codeList.add(codeListItem);
+        for (int i = 0; i < codeListCount; i++) {
+            String codes = scanner.nextLine();
+            codeList[i] = codes.split(" ", 0);
         }
 
-        int shoppingCartCount = scanner.nextInt();
-        scanner.nextLine();
-
-
-        ArrayList<String> shoppingCart = new ArrayList<String>();
-
-        for (int i = 0; i < shoppingCartCount; i++)
-        {
-            String shoppingCartItem = scanner.nextLine();
-            shoppingCart.add(shoppingCartItem);
-        }
+        String shoppingCartString = scanner.nextLine();
+        String[] shoppingCart = shoppingCartString.split(" ", 0);
 
         int foo = Foo.IsBuyerWinner(codeList, shoppingCart);
-
         System.out.println(foo);
     }
 }
