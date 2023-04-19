@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Solution {
@@ -8,12 +9,17 @@ public class Solution {
         scanner.nextLine();
 
 
-        ArrayList<String> codeList = new ArrayList<String>();
+        ArrayList<ArrayList<String>> codeList = new ArrayList<ArrayList<String>>();
 
-        for (int i = 0; i < codeListCount; i++)
-        {
-            String codeListItem = scanner.nextLine();
-            codeList.add(codeListItem);
+        for (int i = 0; i < codeListCount; i++) {
+            int listCount = scanner.nextInt();
+            scanner.nextLine();
+            ArrayList<String> list = new ArrayList<String>();
+            for (int j = 0; j < listCount; j++) {
+                String codeListItem = scanner.nextLine();
+                list.add(codeListItem);
+            }
+            codeList.add(list);
         }
 
         int shoppingCartCount = scanner.nextInt();
