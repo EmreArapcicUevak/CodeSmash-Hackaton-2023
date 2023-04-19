@@ -5,6 +5,7 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int codeListCount = scanner.nextInt();
+        scanner.nextLine();
 
 
         ArrayList<String> codeList = new ArrayList<String>();
@@ -16,6 +17,7 @@ public class Solution {
         }
 
         int shoppingCartCount = scanner.nextInt();
+        scanner.nextLine();
 
 
         ArrayList<String> shoppingCart = new ArrayList<String>();
