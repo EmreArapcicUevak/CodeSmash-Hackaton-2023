@@ -19,13 +19,14 @@ public class Foo
     public static int IsBuyerWinner(String[][] codeList,String[] shoppingCart) {
 	String[] currentCodeList = codeList[0];
 	int curIndex = 0;
+	boolean patternFound = true;
 
 	for (int i = 0; i < shoppingCart.length; i++){
 		// Check if there is enough elements left to compare to save time
 		if (currentCodeList.length > shoppingCart.length - i)
 			return 0;
 		else if (checkFruit(currentCodeList[0],shoppingCart[i])) {
-			boolean patternFound = true;
+			patternFound = true;
 
 			for (int j = 1; j < currentCodeList.length; j++){
 				if (!checkFruit(currentCodeList[j],shoppingCart[i + 1])) {
