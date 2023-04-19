@@ -11,7 +11,7 @@ public class Foo
      *  2. List (STRING_ARRAY) - shoppingCart
      */
 
-    public static int IsBuyerWinner(ArrayList<String> codeList, ArrayList<String> shoppingCart) {
+    public static int IsBuyerWinner(ArrayList<ArrayList<String>> codeList, ArrayList<String> shoppingCart) {
         return 0;
     }
 }
