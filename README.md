@@ -33,9 +33,20 @@ Please provide written explanation of your approach.
 
 ##### BONUS
 Provide time and space complexity of your approach.
+---
 
 ### Approach Explanation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Our aproach can be summarised in a few simple steps:
+1. Get all the data from standard input
+1. Reorganize that data into arrays for easier use
+1. Loop through the shopping cart checking before hand if there are even enough products to be compared with the code array
+1. If an comparison between the cart and the code arrays happened, proceed to the next element and check if they still match
+  - If they do match jump the shopping cart element up by 1
+  - If not break out and don't move one forward (since by the end of the for loop the for loop would increment by 1 by default)
+5. If all of the elements matched properly move to the next code list if possible.
+  - If no more codes are left return 1
+6. If at any point all of the conditioned before have not been met and we ran out of elements to go over, return 0
+
 ### Example input 
 ```java
 2  // number of codes
@@ -45,4 +56,4 @@ apple apple banana apple orange orange kiwi orange // shopping cart
 ```
 
 ### Space and time complexity
-For space and time complexity of the solution check this [link](https://github.com/EmreArapcicUevak/CodeSmash-Hackaton-2023/issues/3).
+For space and time complexity of the solution click [here](https://github.com/EmreArapcicUevak/CodeSmash-Hackaton-2023/issues/3).
